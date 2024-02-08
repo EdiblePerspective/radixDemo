@@ -6,7 +6,7 @@ const SliderComp=(props)=>{
     return(
     <form>
       <Slider.Root className="SliderRoot" defaultValue={[1]} max={360} step={1}
-      value={props.value} onValueChange={props.onValueChange}>
+      value={props.value} onValueChange={props.onValueChange} onValueCommit={props.onValueCommit}>
         <Slider.Track className="SliderTrack">
           <Slider.Range className="SliderRange" />
         </Slider.Track>

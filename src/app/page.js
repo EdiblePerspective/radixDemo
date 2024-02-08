@@ -29,7 +29,7 @@ setLight((light)=>true)
 </form>
 </div>
 <div>
-<SliderComp onValueChange={()=>setHue((hue)=> (Math.floor(Math.random() * (360 - 1) + 1)))}/>
+<SliderComp onValueCommit={()=>setHue((hue)=> (Math.floor(Math.random() * (360 - 1) + 1)))}/>
 </div>
 <div>
 <Progress.Root className="ProgressRoot" value={progress}>
