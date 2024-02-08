@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: 'Radix Example',
-  description: 'AHHHHHHHH',
+  description: 'Radix Demo',
 }
 import "./globals.css";
 
@@ -10,12 +10,8 @@ import "./globals.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
-      <body className="pageBody">
-      
-      <h1>Working!</h1>
+      <h1>Radix Demo</h1>
       {children}
-      </body>
     </html>
   );
 }

@@ -26,7 +26,7 @@ export default function Cursor(){
     
     return(
         <motion.div 
-        className="rounded-full bg-white -z-10 size-5 fixed opacity-50"
+        className="rounded-full bg-white -z-10 size-36 fixed opacity-90"
         style={{left:smoothMouse.x, top:smoothMouse.y}}
         >
 

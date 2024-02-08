@@ -2,14 +2,8 @@ import React from 'react';
 import * as Progress from '@radix-ui/react-progress';
 import '../globals.css';
 
-const ProgressBar = () => {
-  const [progress, setProgress] = React.useState(13);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function ProgressBar() {
+  const [progress, setProgress] = useState(0);
   return (
     <Progress.Root className="ProgressRoot" value={progress}>
       <Progress.Indicator
@@ -20,5 +14,4 @@ const ProgressBar = () => {
   );
 };
 
-export default ProgressBar;
 
