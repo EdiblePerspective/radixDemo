@@ -9,16 +9,18 @@ export default function Home() {
   const [light, setLight] = useState(true)
   const [cat, setCat]=useState(false)
   const [progress, setProgress] = useState(0);
+  const [hue, setHue] = useState(0);
   return (
   <>
 
-<body className={cat===true?`cat backdrop-hue-rotate-${SliderComp.props}`
+<body className={cat===true?`cat backdrop-hue-rotate-${hue} hue-rotate-[${hue}deg] `
 :(light===true?'bg-white':'bg-black')} >
 <div>
 <form>
 <Switch.Root className='SwitchRoot' 
 onClick={()=>light===(true)?setLight((light)=>false)
-  &setProgress((progress)=>progress+50):
+  &setProgress((progress)=>progress+50)
+  &console.log(hue):
 setLight((light)=>true)  
 &setCat((cat)=>true)
 &setProgress((progress)=>progress+50)}>
@@ -27,7 +29,7 @@ setLight((light)=>true)
 </form>
 </div>
 <div>
-<SliderComp/>
+<SliderComp onValueChange={()=>setHue((hue)=> (Math.floor(Math.random() * (360 - 1) + 1)))}/>
 </div>
 <div>
 <Progress.Root className="ProgressRoot" value={progress}>
