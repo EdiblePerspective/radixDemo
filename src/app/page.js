@@ -27,17 +27,17 @@ export default function Home() {
 <form>
 <Switch.Root className='SwitchRoot' 
 onClick={()=>light===(true)?setLight((light)=>false)
-  &setProgress((progress)=>progress+50)
+  &setProgress((progress)=>progress+33)
   &console.log(hue):
 setLight((light)=>true)  
 &setCat((cat)=>true)
-&setProgress((progress)=>progress+50)}>
+&setProgress((progress)=>progress+33)}>
   <Switch.Thumb className='SwitchThumb' />
 </Switch.Root>
 </form>
 </div>
 <div>
-<SliderComp onValueCommit={()=>setHue((hue)=> (Math.floor(Math.random() * (360 - 1) + 1)))}/>
+<SliderComp onValueCommit={()=>setHue((hue)=> (Math.floor(Math.random() * (360 - 1) + 1)))&setProgress((progress)=>progress+34)}/>
 </div>
 <div>
 <Progress.Root className="ProgressRoot" value={progress}>
